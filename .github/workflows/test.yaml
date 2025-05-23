@@ -20,3 +20,6 @@ jobs:
           pip install -r requirements.txt
       - name: Test
         run: python test.py
+      - name: Analyse code
+        run: |
+          pylint $(git ls-files '*.py')
