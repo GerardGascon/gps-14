@@ -21,8 +21,6 @@ jobs:
       - name: Analyse code
         run: |
           pylint $(git ls-files '*.py')
-      - name: Test
-        run: python test.py
       - name: Run tests with coverage
         run: |
           pip install coverage
